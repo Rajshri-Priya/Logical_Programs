@@ -3,17 +3,15 @@ public class Logical_Programs
 { 
     public static void Main(string[] args)
     {
-        Console.WriteLine("Enter the Number");
-        int num = Convert.ToInt32(Console.ReadLine());
-
-        for (int i = 2; i <= num / 2; i++)
+        Console.WriteLine("Enter a Number to reverse");
+        int Num = Convert.ToInt32(Console.ReadLine());//for converting into integer
+        int Reverse = 0;
+        while (Num > 0)
         {
-            if (num % i == 0)
-            {
-                Console.WriteLine(num + " is Not Prime Number");
-                return;
-            }
+            int remainder = Num % 10;
+            Reverse = (Reverse * 10) + remainder;
+            Num = Num / 10;
         }
-        Console.WriteLine(num + " is Prime Number");
+        Console.WriteLine("Reverse No. is {0}", Reverse);
     }
 }
