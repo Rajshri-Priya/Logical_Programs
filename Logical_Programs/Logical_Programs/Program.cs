@@ -3,7 +3,7 @@ public class Logical_Programs
 { 
     public static void Main(string[] args)
     {
-        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";//included all characters,number and symbol
         var stringChars = new char[6];
         var random = new Random();
 
