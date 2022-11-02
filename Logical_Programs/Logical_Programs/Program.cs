@@ -1,19 +1,19 @@
 ﻿using System;
+using System.Diagnostics;
+
 public class Logical_Programs
 { 
     public static void Main(string[] args)
     {
-        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";//included all characters,number and symbol
-        var stringChars = new char[6];
-        var random = new Random();
-
-        for (int i = 0; i < stringChars.Length; i++)
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+        for (int i = 0; i < 1000; i++)
         {
-            stringChars[i] = chars[random.Next(chars.Length)];
+            Thread.Sleep(1);
         }
+        stopwatch.Stop();
 
-        var finalString = new String(stringChars);
-        Console.WriteLine(finalString);
+        Console.WriteLine($"Time elapsed:  {stopwatch.Elapsed}");
 
     }
 }
