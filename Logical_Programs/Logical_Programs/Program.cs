@@ -1,31 +1,19 @@
 ﻿using System;
 public class Logical_Programs
-{
+{ 
     public static void Main(string[] args)
     {
-
         Console.WriteLine("Enter the Number");
-        double num = Convert.ToDouble(Console.ReadLine());
-        int sum = 0;
-        for (int i = 1; i < num; i++)// for clculating sum of factors
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 2; i <= num / 2; i++)
         {
             if (num % i == 0)
             {
-                int[] arr = { i };
-                foreach (int x in arr)
-                {
-                    sum += i;
-                }
+                Console.WriteLine(num + " is Not Prime Number");
+                return;
             }
         }
-        Console.WriteLine($"Sum of its factors are " + sum);
-        if (sum == num)
-        {
-            Console.WriteLine("It is a perfect Number");
-        }
-        else
-        {
-            Console.WriteLine("It is not a Perfect Number");
-        }
+        Console.WriteLine(num + " is Prime Number");
     }
 }
