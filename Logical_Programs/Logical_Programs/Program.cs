@@ -8,6 +8,7 @@ public class Logical_Programs
         Console.Write("Enter the number of elements: ");
         number = int.Parse(Console.ReadLine());// parse method returns converted value .
                                                // or we use res=convert.ToInt32(val)
+        Console.ReadLine()//just for change
         Console.Write(n1 + " " + n2 + " "); //printing 0 and 1    
         for (i = 2; i < number; ++i) //loop starts from 2 because 0 and 1 are already printed    
         {
