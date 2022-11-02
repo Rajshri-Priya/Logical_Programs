@@ -3,15 +3,17 @@ public class Logical_Programs
 { 
     public static void Main(string[] args)
     {
-        Console.WriteLine("Enter a Number to reverse");
-        int Num = Convert.ToInt32(Console.ReadLine());//for converting into integer
-        int Reverse = 0;
-        while (Num > 0)
+        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var stringChars = new char[6];
+        var random = new Random();
+
+        for (int i = 0; i < stringChars.Length; i++)
         {
-            int remainder = Num % 10;
-            Reverse = (Reverse * 10) + remainder;
-            Num = Num / 10;
+            stringChars[i] = chars[random.Next(chars.Length)];
         }
-        Console.WriteLine("Reverse No. is {0}", Reverse);
+
+        var finalString = new String(stringChars);
+        Console.WriteLine(finalString);
+
     }
 }
